@@ -26,7 +26,7 @@ The goals of this project are the following:
 
 ### 1. Pipeline
 
-The pipeline consists of steps.
+The pipeline consists of the following steps.
 
 * Applying white and yellow masks for the original image. To do so, the image is first converted to HSV color space and then white and yellow defined colors regions are applied.
 * Converting the image to the grayscale.
