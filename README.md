@@ -37,7 +37,7 @@ The previous two steps may be not needed if we define yellow and white masks acc
 * Finding lines in Hough space. Minimum line length was only 10px with 3px max gap. Interestingly even that it seems not enough for few frames of 'challenge' video where a lot of shadows were on the road or the road was very bright. So for these cases there might be a need in further decreasing line parameters as well as adjusting Canny function arguments.
 * After all lines were found, they are split in two categories: left and right ones. To do so, we assume that for left line (y2 - y1)/(x2 - x1) value should be less than 0, its x coordinates be less than image width divided by 2, and its angle absolute value should be between pi/8 and pi/3 radians. For the right line restrictions are: (y2 - y1)/(x2 - x1) > 0, x coords > image width / 2 and same values for the angle.
 * Left and right lines sets are averaged into one left line and one right line. Every line is extrapolated until the image bottom axis and top of region of interest. Also, for every line the weight is set that is calculated as line length. All intersections with image bottom and top axis are averaged considering their weights. The resulted two points give the result line.
-* The left and right lane are drawn above the initial image.
+* The left and right lanes are drawn above the initial image.
 
 The results over the input test images are:
 ![][image1]
@@ -52,7 +52,7 @@ The results over the input test images are:
 
 One potential shortcoming would be what would happen when there are a lot of shadows on the road or the road is very bright (especially if the lane is yellow). In this case lines become very segmented and edges are defined very approximately. It results in very approximate average lines and thus lanes might vary significantly.
 
-Another shortcoming could be if the road is very 'curvy'. In this case simple extrapolation won't be enough - trying to average the road turn might result in very inaccurate lane.
+Another shortcoming could be if the road is very 'curvy'. In this case simple extrapolation won't be enough - trying to average the road turn (even small enough) might produce the very inaccurate lane.
 
 
 ### 3. Possible improvements
