@@ -4,10 +4,10 @@
 
 In this project lane lines are detected in images and videos using Python and OpenCV.
 
-The input images are located in [test_images/]('./test_images/') folder and their outputs in [test_images_output/]('./test_images_output/')
-For the videos folders are [test_videos/]('./test_videos/') and [test_videos_output/]('./test_videos_output/') respectively.
+The input images are located in [test_images/]('test_images/') folder and their outputs in [test_images_output/]('test_images_output/')
+For the videos folders are [test_videos/]('test_videos/') and [test_videos_output/]('test_videos_output/') respectively.
 
-To see the writeup of this project, check the [writeup.md]('./writeup.md').
+To see the writeup of this project, check the [writeup.md]('writeup.md').
 
 ---
 
